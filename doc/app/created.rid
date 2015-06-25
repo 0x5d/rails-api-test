@@ -1,0 +1,5 @@
+Wed, 24 Jun 2015 10:24:27 -0500
+README.rdoc	Wed, 24 Jun 2015 08:56:43 -0500
+app/controllers/application_controller.rb	Wed, 24 Jun 2015 08:56:43 -0500
+app/controllers/users_controller.rb	Wed, 24 Jun 2015 09:04:32 -0500
+app/models/user.rb	Wed, 24 Jun 2015 09:04:32 -0500

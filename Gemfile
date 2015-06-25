@@ -1,8 +1,12 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.2'
 gem 'rails-api'
+gem 'grape', '~> 0.12.0'
+gem 'grape-entity', '~> 0.4.5'
+gem 'grape-swagger', '~> 0.10.1'
+gem 'grape-swagger-rails', '~> 0.1.0'
+gem 'rack-contrib'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
