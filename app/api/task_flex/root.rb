@@ -5,6 +5,6 @@ module TaskFlex
     # Separate the api into smaller
     # modules like this
     mount TaskFlex::V1::Root => '/v1'
-    
+
   end
 end
