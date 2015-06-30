@@ -13,7 +13,11 @@ module TaskFlex
         requires :id, type: Integer
       end
       get :id do
-        present User.find(params[:id]), with: Entities::User
+        begin
+          present User.find(params[:id]), with: Entities::User
+        rescue ActiveRecord::RecordNotFound
+          error!({ message: 'Inexistent user.', code: 404, with: TaskFlex::V1::TFError })
+        end
       end
 
       desc 'creates a new user',
@@ -58,7 +62,7 @@ module TaskFlex
 				begin
 					User.find(params[:id]).destroy
 				rescue ActiveRecord::RecordNotFound
-					error!({ message: 'Inexistent id.', code: 404, with: TaskFlex::V1::TFError })
+					error!({ message: 'Inexistent user.', code: 404, with: TaskFlex::V1::TFError })
 				end
 			end
     end
