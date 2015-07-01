@@ -12,7 +12,7 @@ module TaskFlex
       params do
         requires :id, type: Integer
       end
-      get :id do
+      get ':id' do
         begin
           present User.find(params[:id]), with: Entities::User
         rescue ActiveRecord::RecordNotFound
