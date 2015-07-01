@@ -2,6 +2,7 @@ module TaskFlex
 	module V1
 	  module Entities
 	    class User < Grape::Entity
+				expose :id, documentation: { type: "integer", desc: "The user's id"}
 	      expose :name, documentation: { type: "string", desc: "The user's name" }
 	      expose :email, documentation: { type: "string", desc: "The user's email" }
 	      expose :age, documentation: { type: "integer", desc: "The user's age" }
